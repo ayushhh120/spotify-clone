@@ -11,7 +11,7 @@ function convertSecondsToTime(seconds) {
 
 async function getSongs(folder) {
   currFolder = folder;
-  let a = await fetch(`/${folder}/`);
+  let a = await fetch(`songs/${folder}/`);
   let response = await a.text();
   let div = document.createElement("div");
   div.innerHTML = response;
@@ -21,7 +21,7 @@ async function getSongs(folder) {
   for (let index = 0; index < as.length; index++) {
     const element = as[index];
     if (element.href.endsWith(".mp3" || ".m4a")) {
-      songs.push(element.href.split(`/${folder}/`)[1]);
+      songs.push(element.href.split(`songs/${folder}/`)[1]);
     }
   }
 
@@ -90,7 +90,7 @@ async function displayAlbums( ){
               </g>
           </svg>
           </div>
-            <img src="/songs/${folder}/cover.jfif?v=1">
+            <img src="/songs/${folder}/cover.jfif">
             <h4>${response.title}</h4>
             <p>${response.description}</p>
           </div>`
@@ -105,7 +105,7 @@ async function displayAlbums( ){
 
 async function main() {
   // get lists of all songs
-  await getSongs("songs/PopularHits");
+  await getSongs(`songs/${folder}`);
   playMusic(songs[0], true);
 
 // display all the albums on the page
