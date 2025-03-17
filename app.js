@@ -11,7 +11,7 @@ function convertSecondsToTime(seconds) {
 
 async function getSongs(folder) {
   currFolder = folder;
-  let a = await fetch(`/${folder}/`);
+  let a = await fetch(`songs/${folder}/`);
   let response = await a.text();
   let div = document.createElement("div");
   div.innerHTML = response;
@@ -21,7 +21,7 @@ async function getSongs(folder) {
   for (let index = 0; index < as.length; index++) {
     const element = as[index];
     if (element.href.endsWith(".mp3" || ".m4a")) {
-      songs.push(element.href.split(`/${folder}/`)[1]);
+      songs.push(element.href.split(`${folder}/`)[1]);
     }
   }
 
@@ -56,7 +56,7 @@ async function getSongs(folder) {
   });
 }
 const playMusic = (track, pause = false) => {
-  currentSong.src = `/${currFolder}/` + track;
+  currentSong.src = `songs/${currFolder}/` + track;
 
   if (!pause) {
     currentSong.play();
@@ -200,7 +200,7 @@ document.querySelector(".volume>img").addEventListener("click", e=>{
   }
   else{
     e.target.src = e.target.src.replace("mute.svg","volume.svg")
-    currentSong = .10
+    currentSong.volume = 0.10;
     document
     .querySelector(".range")
     .getElementsByTagName("input")[0].value = 10
