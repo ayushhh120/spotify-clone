@@ -11,14 +11,17 @@ function convertSecondsToTime(seconds) {
 
 async function getSongs(folder) {
   currFolder = folder;
-  let a = await fetch(`./songs/${folder}/info.json`);
-  let response = await a.json();
-  songs = response.songs;
+  let a = await fetch(`/${folder}/`);
+  let response = await a.text();
+  let div = document.createElement("div");
+  div.innerHTML = response;
+  let as = div.getElementsByTagName("a");
+  songs = [];
 
   for (let index = 0; index < as.length; index++) {
     const element = as[index];
     if (element.href.endsWith(".mp3" || ".m4a")) {
-      songs.push(element.href.split(`songs/${folder}/`)[1]);
+      songs.push(element.href.split(`/${folder}/`)[1]);
     }
   }
 
@@ -53,7 +56,7 @@ async function getSongs(folder) {
   });
 }
 const playMusic = (track, pause = false) => {
-  currentSong.src = `songs/${currFolder}/${track}`;
+  currentSong.src = `/${currFolder}/` + track;
 
   if (!pause) {
     currentSong.play();
@@ -61,11 +64,10 @@ const playMusic = (track, pause = false) => {
   }
   document.querySelector(".songInfo").innerHTML = decodeURI(track);
   document.querySelector(".songTime").innerHTML = " 00:00 / 00:00";
-  
 };
 
 async function displayAlbums( ){
-    let a = await fetch(`/songs`);
+    let a = await fetch(`/songs/`);
     let response = await a.text();
     let div = document.createElement("div");
     div.innerHTML = response;
@@ -88,7 +90,7 @@ async function displayAlbums( ){
               </g>
           </svg>
           </div>
-            <img src="/songs/${folder}/cover.jfif">
+            <img src= /songs/${folder}/cover.JFIF>
             <h4>${response.title}</h4>
             <p>${response.description}</p>
           </div>`
@@ -103,7 +105,7 @@ async function displayAlbums( ){
 
 async function main() {
   // get lists of all songs
-  await getSongs(`songs/${folder}`);
+  await getSongs("songs/PopularHits");
   playMusic(songs[0], true);
 
 // display all the albums on the page
@@ -198,7 +200,7 @@ document.querySelector(".volume>img").addEventListener("click", e=>{
   }
   else{
     e.target.src = e.target.src.replace("mute.svg","volume.svg")
-    currentSong.volume = 0.10;
+    currentSong = .10
     document
     .querySelector(".range")
     .getElementsByTagName("input")[0].value = 10
@@ -209,7 +211,3 @@ document.querySelector(".volume>img").addEventListener("click", e=>{
 
 }
 main();
-
-
-// node js script
-
