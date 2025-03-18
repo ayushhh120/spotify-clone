@@ -104,8 +104,10 @@ async function displayAlbums( ){
 }
 
 async function main() {
+
+  
   // get lists of all songs
-  await getSongs("songs/PopularHits");
+  await getSongs("songs/LatestFavorites");
   playMusic(songs[0], true);
 
 // display all the albums on the page
