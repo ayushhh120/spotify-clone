@@ -11,12 +11,9 @@ function convertSecondsToTime(seconds) {
 
 async function getSongs(folder) {
   currFolder = folder;
-  let a = await fetch(`songs/${folder}/`);
-  let response = await a.text();
-  let div = document.createElement("div");
-  div.innerHTML = response;
-  let as = div.getElementsByTagName("a");
-  songs = [];
+  let a = await fetch(`./songs/${folder}/info.json`);
+  let response = await a.json();
+  songs = response.songs;
 
   for (let index = 0; index < as.length; index++) {
     const element = as[index];
@@ -56,7 +53,7 @@ async function getSongs(folder) {
   });
 }
 const playMusic = (track, pause = false) => {
-  currentSong.src = `songs/${currFolder}/` + track;
+  currentSong.src = `songs/${currFolder}/${track}`;
 
   if (!pause) {
     currentSong.play();
@@ -64,10 +61,11 @@ const playMusic = (track, pause = false) => {
   }
   document.querySelector(".songInfo").innerHTML = decodeURI(track);
   document.querySelector(".songTime").innerHTML = " 00:00 / 00:00";
+  
 };
 
 async function displayAlbums( ){
-    let a = await fetch(`/songs/`);
+    let a = await fetch(`/songs`);
     let response = await a.text();
     let div = document.createElement("div");
     div.innerHTML = response;
@@ -211,3 +209,7 @@ document.querySelector(".volume>img").addEventListener("click", e=>{
 
 }
 main();
+
+
+// node js script
+
