@@ -68,7 +68,7 @@ const playMusic = (track, pause = false) => {
 
 // display albums function
 async function displayAlbums( ){
-    let a = await fetch(`spotify-clone/songs/albums.json`);
+    let a = await fetch(`./songs/albums.json`);
     let albums = await a.json();
     let cardContainer = document.querySelector(".cardContainer")
     albums.forEach(album=>{
