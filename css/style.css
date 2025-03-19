@@ -297,6 +297,10 @@ body {
     width: 88vw;
     font-size: 15px;
     height: 150px;
+    margin-right: 20px;
+    padding-right: 10px;
+    margin-bottom: 8px;
+    
   }
   .seekbar{
    width: 87vw;
@@ -320,7 +324,7 @@ body {
    max-height: 65vh;
 }
   .card{
-   width: 39.7vw;
+   width: 37.7vw;
   }
   .spotifyplaylists{
    font-size: 13px;
