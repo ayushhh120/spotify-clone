@@ -158,7 +158,7 @@ async function main() {
     let currFolder = card.dataset.folder; 
     if (!currFolder) return; 
 
-    await getSongs(currFolder);
+    await getSongs(folder);
     playMusic(songs[0])
 
 });
