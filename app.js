@@ -75,7 +75,7 @@ async function displayAlbums( ){
         <p>${album.description}</p>
       </div>`;
     })}
-  // display all the albums on the page
+  
  displayAlbums()
 
 // get lists of all songs
@@ -158,7 +158,7 @@ async function main() {
     let folder = card.dataset.folder; 
     if (!folder) return; 
 
-    await getSongs(`songs/${folder}`);
+    await getSongs(folder);
     playMusic(songs[0])
 
 });
