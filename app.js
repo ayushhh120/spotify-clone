@@ -90,7 +90,7 @@ async function displayAlbums( ){
 
 // get lists of all songs
 async function main() {
-  await getSongs("/songs/LatestFavorites");
+  await getSongs("./songs/LatestFavorites");
   playMusic(songs[0], true);
 
 // display all the albums on the page
