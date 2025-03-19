@@ -11,8 +11,7 @@ function convertSecondsToTime(seconds) {
 
 async function getSongs(folder) {
   currFolder = folder;
-  let a = await(`/songs/${folder}/info.json`);
-
+  let a = await fetch(`/songs/${folder}/info.json`);
   let response = await a.text();
   let div = document.createElement("div");
   div.innerHTML = response;
@@ -72,8 +71,7 @@ async function displayAlbums( ){
     let a = await fetch(`./songs/albums.json`);
     let albums = await a.json();
     let cardContainer = document.querySelector(".cardContainer")
-    albums.forEach(album=>{
-                         
+    albums.forEach(album=>{                 
         cardContainer.innerHTML += `<div data-folder="${album.folder}" class="card">
         <div class= "play"><svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24" width="40" height="40">
           <circle cx="12" cy="12" r="12" fill="#1FDF64"/>
