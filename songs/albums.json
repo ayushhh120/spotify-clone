@@ -1,0 +1,52 @@
+
+[
+    {
+        "folder": "Aashiqui2",
+        "title": "Aashiqui 2",
+        "description": "All hits from aashiqui 2",
+        "cover": "/songs/Aashiqui2/cover.jfif"
+    },
+    {
+        "folder": "Arijit'sHits",
+        "title": "Arijit'sHits",
+        "description": "Listen to your all fav songs of Arijit Singh",
+        "cover": "/songs/Arijit'sHits/cover.jfif"
+    },
+    {
+        "folder": "EnglishSongs",
+        "title": "English Songs",
+        "description": "Here's some best hollywood songs for you",
+        "cover": "/songs/EnglishSongs/cover.jfif"
+    },
+    {
+      "folder": "LatestFavorites",
+      "title": "Latest Favorites",
+      "description": "Latest hits you will love!",
+      "cover": "/songs/LatestFavorites/cover.jfif"
+    },
+    {
+        "folder": "LoveRomance",
+        "title": "Love Romance",
+        "description": "Songs that you would like to listen with your partner",
+        "cover": "/songs/LoveRomance/cover.jfif"
+    },
+    {
+        "folder": "RainyMood",
+        "title": "Rainy Mood",
+        "description": "Enjoy best choice of songs for rainy weather",
+        "cover": "/songs/RainyMood/cover.jfif"
+    },
+    {
+        "folder": "SanamTeriKasam",
+        "title": "Sanam Teri Kasam",
+        "description": "Romantic hits from STK movie",
+        "cover": "/songs/SanamTeriKasam/cover.jfif"
+    },
+    {
+        "folder": "SleepyNights",
+        "title": "Sleepy Nights",
+        "description": "Relaxing music for the best sleep",
+        "cover": "/songs/SleepyNights/cover.jfif"
+    }
+  ]
+  
