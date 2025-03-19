@@ -10,8 +10,8 @@ function convertSecondsToTime(seconds) {
 }
 
 async function getSongs(folder) {
-  currFolder = folder;
-  let a = await fetch(`/songs/${folder}/info.json`);
+  currFolder = `/songs/${folder}`;
+  let a = await fetch(`/songs/${currFolder}/info.json`);
   let response = await a.json();
   songs = response.songs;
 
