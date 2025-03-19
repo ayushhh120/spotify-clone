@@ -66,6 +66,7 @@ const playMusic = (track, pause = false) => {
   document.querySelector(".songTime").innerHTML = " 00:00 / 00:00";
 };
 
+// display albums function
 async function displayAlbums( ){
     let a = await fetch(`/songs/albums.json`);
     let albums = await a.json();
@@ -83,15 +84,12 @@ async function displayAlbums( ){
         <img src="${album.cover}">
         <h4>${album.title}</h4>
         <p>${album.description}</p>
-      </div>`
-    })
+      </div>`;
+    })}
 
 
-
+// get lists of all songs
 async function main() {
-
-  
-  // get lists of all songs
   await getSongs("/songs/LatestFavorites");
   playMusic(songs[0], true);
 
@@ -195,5 +193,5 @@ document.querySelector(".volume>img").addEventListener("click", e=>{
   }
 
 }) 
-}}
+}
 main();
