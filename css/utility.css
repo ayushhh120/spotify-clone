@@ -54,3 +54,6 @@
     scrollbar-color: #444 #1a1a1a; /* Thumb & Track */
     scrollbar-width: thin;
 }
+.white{
+    filter: invert(1) sepia(1) saturate(5) hue-rotate(180deg);
+}   
