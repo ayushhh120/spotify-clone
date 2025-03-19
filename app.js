@@ -75,15 +75,15 @@ async function displayAlbums( ){
         <p>${album.description}</p>
       </div>`;
     })}
-
+  // display all the albums on the page
+ displayAlbums()
 
 // get lists of all songs
 async function main() {
   await getSongs("LatestFavorites");
   playMusic(songs[0], true);
 
-// display all the albums on the page
- displayAlbums()
+
 
   // attach an event listner to play next and previous
   play.addEventListener("click", () => {
