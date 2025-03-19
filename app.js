@@ -12,8 +12,9 @@ function convertSecondsToTime(seconds) {
 async function getSongs(folder) {
   currFolder = `/songs/${folder}`;
   let a = await fetch(`${currFolder}/info.json`);
-  let response = await a.json();
+  let response = await a.json()
   songs = response.songs;
+  console.log(songs);
 
 // show all the songs in the playlist
   let songUl = document
@@ -80,8 +81,8 @@ async function displayAlbums( ){
 
 // get lists of all songs
 async function main() {
-  await getSongs("LatestFavorites");
-  playMusic(songs[0], true);
+  // await getSongs("LatestFavorites");
+  // playMusic(songs[0], true);
 
 
 
@@ -158,7 +159,7 @@ async function main() {
     let currFolder = card.dataset.folder; 
     if (!currFolder) return; 
 
-    await getSongs(folder);
+    await getSongs(currFolder);
     playMusic(songs[0])
 
 });
