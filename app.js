@@ -11,7 +11,7 @@ function convertSecondsToTime(seconds) {
 
 async function getSongs(folder) {
   currFolder = `/songs/${folder}`;
-  let a = await fetch(`/songs/${currFolder}/info.json`);
+  let a = await fetch(`${currFolder}/info.json`);
   let response = await a.json();
   songs = response.songs;
 
@@ -155,10 +155,10 @@ async function main() {
     let card = event.target.closest(".card");
     if (!card) return; 
 
-    let folder = card.dataset.folder; 
-    if (!folder) return; 
+    let currFolder = card.dataset.folder; 
+    if (!currFolder) return; 
 
-    await getSongs(folder);
+    await getSongs(currFolder);
     playMusic(songs[0])
 
 });
