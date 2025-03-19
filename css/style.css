@@ -293,12 +293,17 @@ body {
   .right {
     width: 100vw;
   }
+  .header{
+    display: flex;
+    background-color: rgb(34, 34, 39);
+    justify-content: space-between;
+    height: 80px;
+  }
   .playbar {
-    width: 88vw;
+    width: 87vw;
     font-size: 15px;
-    height: 150px;
+    height: 141px;
     margin-right: 20px;
-    padding-right: 10px;
     margin-bottom: 8px;
     
   }
@@ -324,16 +329,19 @@ body {
    max-height: 65vh;
 }
   .card{
-   width: 37.7vw;
+   width: 37.5vw;
   }
   .spotifyplaylists{
-   font-size: 13px;
+   font-size: 11px;
   }
   .right{
    margin: 0px;
   }
   .songbuttons img{
-   width: 38px
+   width: 38px;
+  }
+  .songbuttons{
+    margin-right: 37px;
   }
   .volume{
     cursor: pointer;
