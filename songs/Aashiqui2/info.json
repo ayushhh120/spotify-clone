@@ -2,9 +2,6 @@
   "title": "Ashiqui 2",
   "description": "All songs from Ashiqui 2",
   "songs": [
-      {
-          "title": "Milne Hai Mujhse Aayi",
-          "file": "10 - Milne Hai Mujhse Aayi.mp3"
-      }
+        "10 - Milne Hai Mujhse Aayi.mp3"
   ]
 }
