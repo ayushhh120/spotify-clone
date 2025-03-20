@@ -19,12 +19,6 @@
         "cover": "/songs/EnglishSongs/cover.jfif"
     },
     {
-      "folder": "LatestFavorites",
-      "title": "Latest Favorites",
-      "description": "Latest hits you will love!",
-      "cover": "/songs/LatestFavorites/cover.jfif"
-    },
-    {
         "folder": "LoveRomance",
         "title": "Love Romance",
         "description": "Songs that you would like to listen with your partner",

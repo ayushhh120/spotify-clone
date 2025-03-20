@@ -79,10 +79,11 @@ async function displayAlbums( ){
   
  displayAlbums()
 
-// get lists of all songs
+// play the initial song when website is loaded
+
 async function main() {
-  // await getSongs("LatestFavorites");
-  // playMusic(songs[0], true);
+  await getSongs("LatestFavorites");
+  playMusic(songs[2], true);
 
 
 
@@ -132,13 +133,13 @@ async function main() {
 
   // add an event listner to previous and next button
   previous.addEventListener("click", () => {
-    let index = songs.indexOf(currentSong.src.split("/").slice(-1)[0]);
+    let index = songs.indexOf(decodeURIComponent(currentSong.src.split("/").slice(-1)[0]));
     if (index - 1 >= 0) {
       playMusic(songs[index - 1]);
     }
   });
   next.addEventListener("click", () => {
-    let index = songs.indexOf(currentSong.src.split("/").slice(-1)[0]);
+    let index = songs.indexOf(decodeURIComponent(currentSong.src.split("/").slice(-1)[0]));
     if (index + 1 < songs.length) {
       playMusic(songs[index + 1]);
     }
@@ -175,7 +176,7 @@ document.querySelector(".volume>img").addEventListener("click", e=>{
   }
   else{
     e.target.src = e.target.src.replace("mute.svg","volume.svg")
-    currentSong = 0.10
+    currentSong.volume = 0.10
     document
     .querySelector(".range")
     .getElementsByTagName("input")[0].value = 10

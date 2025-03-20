@@ -1,5 +1,12 @@
 {
-    "title": "Love Romance",
-    "description": "abe singal love songs sunega?"
+  "songs" : [
+      "_aaoge_jab_tum_but_it_s_playing_from_your_neighbour_s_house_it_s.mp3",
+      "_Phir_Se_Ud_Chala_Full_Song_Rockstar_Ranbir_KapoorMP3_128K.mp3",
+      "Atif_Aslam_Musafir_Song_Sweetiee_Weds_NRI_Himansh_Kohli_Zoya_Afroz.mp3",
+      "Full_Video_Nazar_Na_Lag_Jaaye_STREE_Rajkummar_Rao_Shraddha_Kapoor.mp3",
+      "Jashn-E-Bahara (Full Song) cover by Asif Javed(MP3_160K).mp3",
+      "Kajra_Mohobbat_Wala_Reprised_Version_Sachet_Tandon_MP3_160K.mp3",
+      "Mareez_E_Ishq_Full_Video_ZiD_Mannara_Karanvir_Arijit_Singh_Sharib.mp3"
+  ]
 
 }
