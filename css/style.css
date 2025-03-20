@@ -280,7 +280,7 @@ body {
 
 /* adding media queries for responsiveness */
 
-@media (max-width: 1000px)and (max-height: 950px){
+@media (max-width: 1000px) and (max-height: 950px){
   .left {
     position: absolute;
     left: -120%;
@@ -319,7 +319,7 @@ body {
    align-items: center;
   }
 .cardContainer{
-   justify-content: center;
+  display: flex;
    margin: 0px;
    margin-top: 11px;
    font-weight: 0px;
@@ -352,11 +352,12 @@ body {
     width: 250px;
   }
 }
-@media (max-height: 830px)
+@media  (max-width: 1000px) and (max-height: 830px)
 {
   .header{
     height: 68px;
   }
+  
 .cardContainer{
   justify-content: center;
   margin: 0px;
