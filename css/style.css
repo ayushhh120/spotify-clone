@@ -352,7 +352,7 @@ body {
     width: 250px;
   }
 }
-@media (max-width: 500px) and (max-height: 810px)
+@media (max-width: 500px) and (max-height: 700px)
 {
   .header{
     height: 68px;
@@ -366,7 +366,7 @@ body {
   max-height: 58vh;
 }
 .playbar {
-  height: 125px;
+  height: 123px;
 }
 .aboveBar {
   height: 125px;
