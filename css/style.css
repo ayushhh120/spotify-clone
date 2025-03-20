@@ -352,7 +352,7 @@ body {
     width: 250px;
   }
 }
-@media (max-height: 650px)
+@media (max-height: 830px)
 {
   .header{
     height: 68px;
