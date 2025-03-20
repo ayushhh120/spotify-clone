@@ -348,4 +348,8 @@ body {
    margin-left: 10px;
    padding-left: 10px;
   }
+  .songInfo{
+    height: 17px;
+    width: 250px;
+  }
 }
