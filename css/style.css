@@ -352,23 +352,24 @@ body {
     width: 250px;
   }
 }
-@media (max-width: 1200px) and (max-height: 860px)
+@media (max-width: 1200px) and (max-height: 844px)
 {
+  .header{
+    height: 71px;
+  }
 .cardContainer{
   justify-content: center;
   margin: 0px;
   margin-top: 11px;
   font-weight: 0px;
   font-size: 12px;
-  max-height: 62vh;
+  max-height: 61vh;
 }
 .playbar {
   height: 133px;
 }
 .aboveBar {
-  height: 130px;
+  height: 132px;
 }
-.header{
-  height: 76px;
-}
+
 }
