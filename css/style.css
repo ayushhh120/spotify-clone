@@ -366,10 +366,13 @@ body {
   max-height: 55vh;
 }
 .playbar {
-  height: 120px;
+  height: 127px;
 }
 .aboveBar {
-  height: 116px;
+  height: 121px;
 }
-
+.songInfo{
+  height: 20px;
+  width: 250px;
+}
 }
