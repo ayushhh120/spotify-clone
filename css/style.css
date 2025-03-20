@@ -302,7 +302,7 @@ body {
   .playbar {
     width: 87vw;
     font-size: 15px;
-    height: 141px;
+    height: 138px;
     margin-right: 20px;
     margin-bottom: 8px;
     
@@ -316,14 +316,13 @@ body {
     height: 30px;
   }
   .aboveBar{
-   margin: 10px 0;
    flex-direction: column;
    align-items: center;
   }
 .cardContainer{
    justify-content: center;
    margin: 0px;
-   margin-top: 13px;
+   margin-top: 11px;
    font-weight: 0px;
    font-size: 12px;
    max-height: 65vh;
