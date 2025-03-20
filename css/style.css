@@ -362,4 +362,13 @@ body {
   font-size: 12px;
   max-height: 62vh;
 }
+.playbar {
+  height: 133px;
+}
+.aboveBar {
+  height: 130px;
+}
+.header{
+  height: 76px;
+}
 }
