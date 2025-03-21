@@ -14,7 +14,6 @@ async function getSongs(folder) {
   let a = await fetch(`${currFolder}/info.json`);
   let response = await a.json()
   songs = response.songs;
-  console.log(songs);
 
 // show all the songs in the playlist
   let songUl = document
